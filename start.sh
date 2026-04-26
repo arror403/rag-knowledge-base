@@ -63,13 +63,8 @@ LAN_IP=$(hostname -I 2>/dev/null | awk '{print $1}')
 echo ""
 echo "========================================"
 echo ""
-echo "RAG:		http://localhost:8501"
-
-#if [ -n "$LAN_IP" ]; then
-#    echo "LAN:     http://${LAN_IP}:8501"
-#fi
-
-echo "LLaMA:	http://localhost:8080"
+echo "  RAG:     http://localhost:8501"
+echo "  LLaMA:   http://localhost:8080"
 echo ""
 echo "  Commands:"
 echo "    Stop:      docker compose down"
