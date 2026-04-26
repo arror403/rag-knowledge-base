@@ -25,7 +25,6 @@ No data ever leaves your computer.
 - [Configuration](#configuration)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -361,7 +360,7 @@ All key settings are in `docker-compose.yml`.
 
 ### Change the Model
 
-[LLaMA.cpp HTTP Server](https://github.com/ggml-org/llama.cpp/tree/master/tools/server)
+For all config: [LLaMA.cpp HTTP Server](https://github.com/ggml-org/llama.cpp/tree/master/tools/server)
 
 ```yaml
 command: >
@@ -385,14 +384,9 @@ command: >
 
 ### Embedding Model
 
-The embedding model is set in `rag_engine.py`:
-
-```python
-def __init__(self, model_name="all-MiniLM-L6-v2"):
-```
-
+The embedding model is set in `rag_engine.py` 
+embedding_model\all-MiniLM-L6-v2\model.safetensors (~90 MB)
 `all-MiniLM-L6-v2` is fast and works well for most use cases.
-It in embedding_model\all-MiniLM-L6-v2 (~90 MB).
 
 ---
 
@@ -475,31 +469,6 @@ rm -rf vector_db/
 docker compose up --build -d
 ```
 
----
-
-## Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m "Add your feature"`
-4. Push: `git push origin feature/your-feature`
-5. Open a Pull Request
-
-### Ideas for Contributions
-
-- [ ] Support for more file formats (DOCX, HTML, CSV)
-- [ ] Similarity score display for retrieved chunks
-- [ ] Multiple vector DB support (Chroma, Qdrant)
-
----
-
-## License
-
-MIT License — see [LICENSE](LICENSE) file for details.
-
----
 
 ## Acknowledgements
 
