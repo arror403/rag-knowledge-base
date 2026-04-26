@@ -1,0 +1,56 @@
+services:
+  llama:
+    image: ghcr.io/ggml-org/llama.cpp:server-cuda13
+    container_name: llama-server
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./models:/models:ro
+    command: >
+      -m /models/gemma-4-E4B-it-Q4_K_M.gguf
+      --host 0.0.0.0
+      --port 8080
+    #-ngl 99
+    #--ctx-size 2048
+    #--threads 4
+    #-n 512
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 120s
+    restart: unless-stopped
+
+  rag:
+    build: .
+    container_name: rag-app
+    ports:
+      # LAN access: bind to all interfaces
+      # Anyone on your network can reach http://YOUR_LAN_IPv4:8501
+      # - "0.0.0.0:8501:8501"
+      # To restrict to localhost only, use instead:
+      # - "127.0.0.1:8501:8501"      
+      
+      - "127.0.0.1:8501:8501"
+
+    volumes:
+      - ./data:/app/data
+      - ./vector_db:/app/vector_db
+    environment:
+      - DEFAULT_LLM_URL=http://llama:8080/v1/chat/completions
+      - HF_HUB_OFFLINE=1
+      - TRANSFORMERS_OFFLINE=1
+      - HF_HUB_DISABLE_TELEMETRY=1
+      - TRANSFORMERS_NO_ADVISORY_WARNINGS=1
+    depends_on:
+      llama:
+        condition: service_healthy
+    restart: unless-stopped

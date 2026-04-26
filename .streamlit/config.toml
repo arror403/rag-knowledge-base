@@ -1,0 +1,17 @@
+[server]
+# Disable file watcher (fixes torchvision warning)
+fileWatcherType = "none"
+
+# Headless mode (no browser auto-open)
+headless = true
+
+# Bind to all interfaces (required for Docker + LAN access)
+address = "0.0.0.0"
+port = 8501
+
+[browser]
+# Disable telemetry
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
