@@ -217,7 +217,7 @@ def main():
     with st.sidebar:
 
         # ── LLM Server ────────────────────────────────────────────────────
-        st.header("🖥️ LLM Server")
+        st.header("🖥️ llama-server")
         st.text_input(
             "API Endpoint",
             value=DEFAULT_LLM_URL,
