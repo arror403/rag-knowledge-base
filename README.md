@@ -1,5 +1,14 @@
-# 🛠️ Local RAG Knowledge Base
+# Local RAG Knowledge Base
 
+Inspired by [Vertex AI RAG Engine](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/rag-engine/rag-overview) from Google Cloud.
+
+*Vertex AI RAG Engine, a component of the Vertex AI Platform, facilitates Retrieval-Augmented Generation (RAG). Vertex AI RAG Engine is also a data framework for developing context-augmented large language model (LLM) applications. Context augmentation occurs when you apply an LLM to your data. This implements retrieval-augmented generation (RAG).*
+
+*A common problem with LLMs is that they don't understand private knowledge, that is, your organization's data. With Vertex AI RAG Engine, you can enrich the LLM context with additional private information, because the model can reduce hallucination and answer questions more accurately.*
+
+*By combining additional knowledge sources with the existing knowledge that LLMs have, a better context is provided. The improved context along with the query enhances the quality of the LLM's response.*
+
+---
 A fully local, privacy-first Retrieval-Augmented Generation (RAG) system.
 Ask questions about your documents — everything runs on your own machine.
 No data ever leaves your computer.
@@ -12,7 +21,7 @@ No data ever leaves your computer.
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 - [How It Works](#how-it-works)
 - [Features](#features)
@@ -24,7 +33,6 @@ No data ever leaves your computer.
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
 - [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
 
 ---
 
