@@ -152,11 +152,9 @@ Download a GGUF model and place it in the `/models` folder.
 
 > Not sure which model to use? See [Model Recommendations](#model-recommendations).
 
-```
-Example: Download  gemma-4-E4B-it-Q4_K_M.gguf (4.98 GB)
-from https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_M.gguf?download=true
-then place it in the models folder.
-```
+
+Or download  [gemma-4-E4B-it-Q4_K_M.gguf](https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_M.gguf?download=true) (4.98 GB) and place it in the models folder.
+
 
 ### 3. Update the Model Filename
 
@@ -180,6 +178,15 @@ chmod +x start.sh
 ```
 *The command chmod (change mode) is to change permission of start.sh being able to execute.*
 
+If it shows "Docker is not running", do:
+```
+sudo usermod -aG docker {your_user_name}
+newgrp docker
+```
+or simply
+```
+sudo ./start.sh
+```
 First run takes longer because Docker pulls the llama.cpp image (~2-3 GB).
 
 ### 5. Open in browser
