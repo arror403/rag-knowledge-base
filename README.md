@@ -2,6 +2,8 @@ A fully local, privacy-first Retrieval-Augmented Generation (RAG) system.
 Ask questions about your documents — everything runs on your own machine.
 No data ever leaves your computer.
 
+Retrieval-augmented generation (RAG) is a technique for providing external sources of knowledge to the LLM. It helps improve the accuracy of AI answers by accessing information outside of the model's training data.
+
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker)
 ![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?logo=streamlit)
@@ -58,7 +60,7 @@ Your Documents                  Your Question
 │                                                              │
 │  ┌─────────────────────────┐   ┌──────────────────────────┐  │
 │  │ llama                   │   │ rag                      │  │
-│  │ (official Docker image) │   │ (your Python app)        │  │
+│  │ (official Docker image) │   │                          │  │
 │  │                         │   │                          │  │
 │  │ ghcr.io/ggml-org/       │   │ Streamlit UI             │  │
 │  │   llama.cpp:server      │◄──│ rag_engine.py            │  │
