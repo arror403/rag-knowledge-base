@@ -144,7 +144,7 @@ Download a GGUF model and place it in the `models/` folder.
 > Not sure which model to use? See [Model Recommendations](#model-recommendations).
 
 
-Or download  [gemma-4-E4B-it-Q4_K_M.gguf](https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_M.gguf?download=true) (4.98 GB) and place it in the models folder.
+Or download  [gemma-4-E4B-it-Q4_K_M.gguf](https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_M.gguf?download=true) (4.98 GB) and place it in the `models/` folder.
 
 
 ### 3. Update the Model Filename
@@ -269,8 +269,8 @@ image: ghcr.io/ggml-org/llama.cpp:server
 # GPU (CUDA):
 image: ghcr.io/ggml-org/llama.cpp:server-cuda13
 ```
-Here is the official Docker documentation of llama.cpp:
-https://github.com/ggml-org/llama.cpp/blob/master/docs/docker.md
+
+[Official llama.cpp Docker documentation](https://github.com/ggml-org/llama.cpp/blob/master/docs/docker.md)
 
 
 ---
