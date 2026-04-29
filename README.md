@@ -1,14 +1,3 @@
-# Local RAG Knowledge Base
-
-Inspired by [Vertex AI RAG Engine](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/rag-engine/rag-overview) from Google Cloud.
-
-*Vertex AI RAG Engine, a component of the Vertex AI Platform, facilitates Retrieval-Augmented Generation (RAG). Vertex AI RAG Engine is also a data framework for developing context-augmented large language model (LLM) applications. Context augmentation occurs when you apply an LLM to your data. This implements retrieval-augmented generation (RAG).*
-
-*A common problem with LLMs is that they don't understand private knowledge, that is, your organization's data. With Vertex AI RAG Engine, you can enrich the LLM context with additional private information, because the model can reduce hallucination and answer questions more accurately.*
-
-*By combining additional knowledge sources with the existing knowledge that LLMs have, a better context is provided. The improved context along with the query enhances the quality of the LLM's response.*
-
----
 A fully local, privacy-first Retrieval-Augmented Generation (RAG) system.
 Ask questions about your documents — everything runs on your own machine.
 No data ever leaves your computer.
@@ -140,15 +129,15 @@ Your Documents                  Your Question
 ## Quick Start
 
 ### 1. Clone the Repository
-
+    
 ```bash
-git clone https://github.com/arror403/rag-knowledge-base.git
-cd rag-knowledge-base
+git clone https://github.com/arror403/local-RAG.git
+cd local-RAG
 ```
 
 ### 2. Add Your Model
 
-Download a GGUF model and place it in the `/models` folder.
+Download a GGUF model and place it in the `models/` folder.
 
 > Not sure which model to use? See [Model Recommendations](#model-recommendations).
 
@@ -173,8 +162,7 @@ Edit `docker-compose.yml` and change:
 ### 4. Launch
 
 ```bash
-chmod +x start.sh
-./start.sh
+chmod +x start.sh && ./start.sh
 ```
 *The command chmod (change mode) is to change permission of start.sh being able to execute.*
 
@@ -183,7 +171,7 @@ If it shows "Docker is not running", do:
 sudo usermod -aG docker {your_user_name}
 newgrp docker
 ```
-or simply
+or simply:
 ```
 sudo ./start.sh
 ```
@@ -338,7 +326,7 @@ Download from [Hugging Face](https://huggingface.co/models?library=gguf).
 ## Project Structure
 
 ```text
-rag-knowledge-base/
+local-RAG/
 ├── .streamlit/
 │   └── config.toml         # Streamlit settings
 ├── data/                   # Your documents live here, persists between container restarts
