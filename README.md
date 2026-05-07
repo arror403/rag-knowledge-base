@@ -2,7 +2,7 @@ A fully local, privacy-first Retrieval-Augmented Generation (RAG) system.
 Ask questions about your documents — everything runs on your own machine.
 No data ever leaves your computer.
 
-Retrieval-augmented generation (RAG) is a technique for providing external sources of knowledge to the LLM. It helps improve the accuracy of AI answers by accessing information outside of the model's training data.
+*Retrieval-augmented generation (RAG) is a technique for providing external sources of knowledge to the LLM. It helps improve the accuracy of AI answers by accessing information outside of the model's training data.*
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker)
@@ -181,9 +181,25 @@ First run takes longer because Docker pulls the llama.cpp image (~2-3 GB).
 
 ### 5. Open in browser
 
-Open **localhost:8501** in your browser.
+Open **localhost:8501** in your browser and you are good to go!
 
 You can also open **localhost:8080** to use the WebUI of llama.cpp. It's like using ChatGPT, but run on your device locally.
+
+---
+
+### Demo
+
+- **local-RAG**
+
+![RAG](https://github.com/arror403/local-RAG/blob/main/demo/RAG_02.png)
+
+- **Building**
+
+![](https://github.com/arror403/local-RAG/blob/main/demo/build.png)
+
+- **llama.cpp WebUI**
+
+![](https://github.com/arror403/local-RAG/blob/main/demo/llama-server.png)
 
 ---
 ### **How to setup Docker in WSL?**
@@ -467,13 +483,17 @@ docker compose up --build -d
 # Stop and remove containers
 docker compose down
 
-# Remove vector database (forces re-ingestion)
-rm -rf vector_db/
+# Start
+docker compose up
 
 # Start fresh
 docker compose up --build -d
 ```
+### Todo
 
+- Tidy up db status
+- Fix use enter key to ask
+- Easier to configure
 
 ## Acknowledgements
 
