@@ -14,6 +14,7 @@ No data ever leaves your computer.
 
 ## Table of Contents
 
+- [Demo](#demo)
 - [How It Works](#how-it-works)
 - [Features](#features)
 - [Requirements](#requirements)
@@ -26,7 +27,21 @@ No data ever leaves your computer.
 - [Troubleshooting](#troubleshooting)
 
 ---
+## Demo
 
+- **local-RAG**
+
+![RAG](https://github.com/arror403/local-RAG/blob/main/demo/RAG_02.png)
+
+- **Building**
+
+![](https://github.com/arror403/local-RAG/blob/main/demo/build.png)
+
+- **llama.cpp WebUI**
+
+![](https://github.com/arror403/local-RAG/blob/main/demo/llama-server.png)
+
+---
 ## How It Works
 
 ```text
@@ -126,6 +141,11 @@ Your Documents                  Your Question
 > **WSL Users (Windows):** Install the NVIDIA driver on **Windows**,
 > not inside WSL. WSL shares the Windows driver automatically.
 
+```
+My setup: Core i7 (11th gen), RTX3060, DDR4 3200 (32GB), SSD 512GB (PCIe 4.0 x4)
+Environment: Docker in WSL2(Ubuntu-24.24) with CUDA
+```
+
 ---
 
 ## Quick Start
@@ -187,21 +207,7 @@ You can also open **localhost:8080** to use the WebUI of llama.cpp. It's like us
 
 ---
 
-### Demo
 
-- **local-RAG**
-
-![RAG](https://github.com/arror403/local-RAG/blob/main/demo/RAG_02.png)
-
-- **Building**
-
-![](https://github.com/arror403/local-RAG/blob/main/demo/build.png)
-
-- **llama.cpp WebUI**
-
-![](https://github.com/arror403/local-RAG/blob/main/demo/llama-server.png)
-
----
 ### **How to setup Docker in WSL?**
 
 You can follow the [official guide](https://docs.docker.com/engine/install/ubuntu/).
