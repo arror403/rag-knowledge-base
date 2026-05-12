@@ -142,8 +142,8 @@ Your Documents                  Your Question
 > not inside WSL. WSL shares the Windows driver automatically.
 
 ```
-My setup: Core i7 (11th gen), RTX3060, DDR4 3200 (32GB), SSD 512GB (PCIe 4.0 x4)
-Environment: Docker in WSL2(Ubuntu-24.24) with CUDA
+My setup: Intel Core i7 (11th gen), RTX3060, DDR4 3200 (32GB), SSD 512GB (PCIe 4.0 x4)
+Environment: Docker in WSL2(Ubuntu-24.04) with CUDA
 ```
 
 ---
